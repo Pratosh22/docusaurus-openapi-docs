@@ -21,8 +21,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.com/PaloAltoNetworks/docusaurus-openapi-docs/tree/main/demo",
           docLayoutComponent: "@theme/DocPage",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
@@ -30,25 +28,20 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        gtag: {
-          trackingID: "GTM-THVM29S",
-          anonymizeIP: false,
-        },
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: "SurveySparrow",
-        items: [
-          {
-            label: "SS API",
-            to: "/category/v3",
-          },
-        ],
+        // items: [
+        //   {
+        //     label: "SS API",
+        //     to: "/category/v3",
+        //   },
+        // ],
         hideOnScroll: true,
       },
       prism: {
@@ -147,7 +140,12 @@ const config = {
         },
       },
     ],
-    require.resolve("docusaurus-lunr-search"),
+    [
+      require.resolve("docusaurus-lunr-search"),
+      {
+        indexBaseUrl: true,
+      },
+    ],
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   stylesheets: [

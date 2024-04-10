@@ -17,24 +17,15 @@ const {
 const sidebars = {
   tutorialSidebar: [
     {
-      type: "html",
-      value: `<p style="color: var(--ifm-color-secondary-darkest)">DOCUMENTATION</p>`, // The HTML to be rendered
-      defaultStyle: true, // Use the default menu item styling
-    },
-    {
       type: "doc",
       id: "intro",
     },
     {
-      type: "doc",
-      id: "sidebars",
+      type: "category",
+      label: "API Reference",
+      collapsed: false,
+      items: require("./docs/ss_versioned/sidebar.js"),
     },
-    // {
-    //   type: "category",
-    //   label: "API Reference",
-    //   link: {
-    //     type: "generated-index",
-    //   },
     //   // items: [
     //   //   {
     //   //     type: "html",
@@ -102,7 +93,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "SurveySparrow v3 API",
+      label: "SurveySparrow V3 API",
       link: {
         type: "generated-index",
         title: "SurveySparrow API (v3.0.0)",
@@ -124,13 +115,18 @@ const sidebars = {
       defaultStyle: true,
       value: versionCrumb(`v2.0.0`),
     },
+    // {
+    //   type: "doc",
+    //   id: "intro",
+    // },
     {
       type: "category",
-      label: "SurveySparrow",
+      label: "SurveySparrow V2 API",
+      collapsed: false,
       link: {
         type: "generated-index",
-        title: "SurveySparrow API (v2.0.0)",
-        description: "SurveySparrow v2 API",
+        title: "SurveySparrow V2 API (v2.0.0)",
+        description: "SurveySparrow V2 API",
         slug: "/category/v2",
       },
       items: require("./docs/ss_versioned/2.0.0/sidebar.js"),
@@ -148,9 +144,14 @@ const sidebars = {
       defaultStyle: true,
       value: versionCrumb(`v1.0.0`),
     },
+    // {
+    //   type: "doc",
+    //   id: "intro",
+    // },
     {
       type: "category",
       label: "SurveySparrow V1 API",
+      collapsed: false,
       link: {
         type: "generated-index",
         title: "SurveySparrow API (v1.0.0)",

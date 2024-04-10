@@ -142,3 +142,9 @@ div[class^="announcementBar_"] {
 .openapi-security__details {
   display: none;
 }
+.dropdown--hoverable:hover .dropdown__menu {
+  transform: translate(0, 0);
+}
+.dropdown__menu {
+  right: inherit !important;
+}

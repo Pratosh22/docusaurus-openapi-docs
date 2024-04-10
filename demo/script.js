@@ -42,6 +42,16 @@ const getOpenAPI = async () => {
     },
   };
 
+  data.servers = [
+    { url: "https://api.surveysparrow.com" },
+    { url: "https://eu-api.surveysparrow.com" },
+    { url: "https://ap-api.surveysparrow.com" },
+    { url: "https://me-api.surveysparrow.com" },
+  ];
+
+  delete data.host;
+  delete data.basePath;
+
   const v1Data = { ...data, paths: {} };
   const v2Data = { ...data, paths: {} };
   const v3Data = { ...data, paths: {} };
