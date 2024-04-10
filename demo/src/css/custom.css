@@ -139,3 +139,6 @@ div[class^="announcementBar_"] {
   );
   font-weight: bold;
 }
+.openapi-security__details {
+  display: none;
+}
