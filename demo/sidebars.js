@@ -115,10 +115,6 @@ const sidebars = {
       defaultStyle: true,
       value: versionCrumb(`v2.0.0`),
     },
-    // {
-    //   type: "doc",
-    //   id: "intro",
-    // },
     {
       type: "category",
       label: "SurveySparrow V2 API",
@@ -144,10 +140,6 @@ const sidebars = {
       defaultStyle: true,
       value: versionCrumb(`v1.0.0`),
     },
-    // {
-    //   type: "doc",
-    //   id: "intro",
-    // },
     {
       type: "category",
       label: "SurveySparrow V1 API",

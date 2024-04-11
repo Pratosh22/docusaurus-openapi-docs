@@ -6,6 +6,9 @@ import {
   setResponse,
   setCode,
   setHeaders,
+  clearCode,
+  clearHeaders,
+  clearResponse,
 } from "../theme/ApiExplorer/Response/slice";
 
 function RequestTable(props) {
@@ -114,9 +117,18 @@ function RequestTable(props) {
                 <tr
                   key={index}
                   onClick={() => {
-                    // dispatch(setResponse(response.data));
-                    // dispatch(setCode(response.responseCode));
-                    // dispatch(setHeaders(response.responseHeaders));
+                    dispatch(clearResponse());
+                    dispatch(clearCode());
+                    dispatch(clearHeaders());
+                    setTimeout(() => {
+                      dispatch(setResponse(response.data));
+                      dispatch(setCode(response.responseCode));
+                      dispatch(setHeaders(response.responseHeaders));
+                    }, 1000);
+                    const responseView = document.getElementsByClassName(
+                      "openapi-explorer__response-container"
+                    )[0];
+                    responseView.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   <td>
